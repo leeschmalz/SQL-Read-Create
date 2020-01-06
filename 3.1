@@ -1,0 +1,8 @@
+CREATE TABLE dvd_rental_site(
+customer_id serial PRIMARY KEY,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+email_address VARCHAR(300) UNIQUE NOT NULL,
+sign_up_date TIMESTAMP NOT NULL,
+time_spent_on_site INTEGER NOT NULL
+);

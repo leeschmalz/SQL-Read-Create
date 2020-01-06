@@ -1,0 +1,9 @@
+CREATE TABLE students(
+student_id serial PRIMARY KEY,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+homeroom_number integer NOT NULL,
+phone_number VARCHAR(14) NOT NULL UNIQUE,
+email VARCHAR(355) NOT NULL UNIQUE,
+grad_year integer CHECK(grad_year >= 2000) NOT NULL
+);

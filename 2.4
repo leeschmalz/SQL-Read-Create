@@ -1,0 +1,7 @@
+--How can you produce a list of facilities that charge a fee to members, 
+--and that fee is less than 1/50th of the monthly maintenance cost? 
+--Return the facid, facility name, member cost, and monthly maintenance of the facilities in question.
+SELECT facilities.facid,facilities.name,facilities.membercost AS membercost,
+facilities.monthlymaintenance AS monthlymaintenance
+FROM cd.facilities
+WHERE membercost/CAST(monthlymaintenance AS DECIMAL (9,2)) < 0.02;
